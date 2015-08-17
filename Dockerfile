@@ -28,5 +28,8 @@ ENV PATH $PATH:$MAVEN_HOME:$MAVEN_BIN:$MAHOUT_HOME:$MAHOUT_BIN:$ES_HOME:$ES_BIN
 # Install plugins
 RUN plugin -install lmenezes/elasticsearch-kopf/v1.5.7 && \
     plugin -install royrusso/elasticsearch-HQ && \
+    plugin -install elasticsearch/elasticsearch-lang-python/2.7.0 && \
     plugin -install org.codelibs/elasticsearch-taste/1.5.0 && \
-    echo -ne "- with Elasticsearch `elasticsearch -v`\n" >> /root/.built
+    plugin -install flavor -url 'https://github.com/f-kubotar/elasticsearch-flavor/releases/download/v0.0.3/elasticsearch-flavor-0.0.3.zip' && \
+    echo -ne "- with Elasticsearch `elasticsearch -v`\n" >> /root/.built && \
+    rm -rf /tmp/*
