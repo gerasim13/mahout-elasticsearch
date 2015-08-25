@@ -31,5 +31,7 @@ RUN plugin -install lmenezes/elasticsearch-kopf/v1.5.7 && \
     plugin -install elasticsearch/elasticsearch-lang-python/2.7.0 && \
     plugin -install org.codelibs/elasticsearch-taste/1.5.0 && \
     plugin -install flavor -url 'https://github.com/f-kubotar/elasticsearch-flavor/releases/download/v0.0.3/elasticsearch-flavor-0.0.3.zip' && \
+    plugin -install entity-resolution -url 'https://bintray.com/artifact/download/yann-barraud/elasticsearch-entity-resolution/org/yaba/elasticsearch-entity-resolution-plugin/1.4.0.0/elasticsearch-entity-resolution-plugin-1.4.0.0.zip' && \
+    plugin -install view-plugin -url 'https://oss.sonatype.org/content/repositories/releases/com/github/tlrx/elasticsearch-view-plugin/0.0.2/elasticsearch-view-plugin-0.0.2-zip.zip' && \
     echo -ne "- with Elasticsearch `elasticsearch -v`\n" >> /root/.built && \
     rm -rf /tmp/*
